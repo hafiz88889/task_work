@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:task_app/app/component/utils/routes.dart';
 import 'package:task_app/app/core/pages/home_screen/presentation/screen/home_page.dart';
 
 
@@ -10,10 +12,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Task App",
-      home: HomePage(),
+      initialRoute: RouteHelper.signUpPage,
+      routes: RouteHelper.getRoute(),
     );
   }
 }
